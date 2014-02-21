@@ -107,6 +107,9 @@ hi colorcolumn ctermbg=234
 " Enable use of the mouse for all modes
 set mouse=a
 
+" softwrap
+set linebreak
+
 function! VisualTagsWrap()
   if !exists('g:tags_to_wrap')
       let g:tags_to_wrap=[]

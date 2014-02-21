@@ -108,7 +108,7 @@ hi colorcolumn ctermbg=234
 set mouse=a
 
 " softwrap
-set linebreak
+set wrap linebreak textwidth=0
 
 function! VisualTagsWrap()
   if !exists('g:tags_to_wrap')

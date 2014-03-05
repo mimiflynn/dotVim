@@ -1,0 +1,20 @@
+" quick edit for gvimrc
+map <leader>g :tabedit ~/.gvimrc.local<CR>
+
+" When gvimrc is edited, reload it
+autocmd! bufwritepost .gvimrc.local source ~/.gvimrc.local
+
+" Appearance
+set lines=50
+set columns=100
+set guifont=Monaco:h12
+set guioptions-=T
+set transparency=5
+colorscheme cobaltish
+
+" highlight current line
+set cursorline
+
+"highlight bg color of current line
+hi cursorline guibg=#7F3700
+hi colorcolumn guibg=#020236

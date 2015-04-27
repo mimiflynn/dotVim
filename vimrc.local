@@ -1,14 +1,5 @@
-
 " Bonus Bundles
-
-Bundle 'git://git.wincent.com/command-t.git'
-
-" Tab settings
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set smarttab
-set expandtab
+"Bundle 'git://git.wincent.com/command-t.git'
 
 " Keyboard Shortcuts
 
@@ -24,13 +15,11 @@ map <leader>e :tabedit! ~/.vimrc.local<CR>
 " Clear trailing whitespace with \s and save the file.
 map <leader>s :%s/\s\+$//e<CR>:w!<CR>
 
-" Fix indentation and return to current line
-map <leader>i mzgg=G`z<CR>
-
 " Open files quickly with \o.
 map <leader>o :tabedit<Space>
 
-map <leader>t :CommandT<CR>
+"map <leader>t :CommandT<CR>
+map <leader>t :CtrlP<CR>
 
 " Open a custom Commad-T instace with \T
 map <leader>T :CommandT<Space>~/Sites
@@ -52,7 +41,6 @@ nmap <leader>n :set invnumber<CR>
 
 map <space> /
 map <c-space> ?
-
 
 " Other Customization
 

@@ -1,6 +1,3 @@
-" Bonus Bundles
-"Bundle 'git://git.wincent.com/command-t.git'
-
 " Keyboard Shortcuts
 
 let mapleader = '\'
@@ -22,7 +19,9 @@ map <leader>o :tabedit<Space>
 map <leader>t :CtrlP<CR>
 
 " Open a custom Commad-T instace with \T
-map <leader>T :CommandT<Space>~/Sites
+map <leader>T :CommandT<Space>~/Projects
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " Open files verticall quickly with \v.
 map <leader>v :vsplit<Space>
@@ -32,6 +31,9 @@ map <leader>[ :tabprev<CR>
 map <leader>] :tabnext<CR>
 map <leader>- :tabfirst<CR>
 map <leader>= :tablast<CR>
+
+" Buffer shortcuts
+map <leader>b :buffer<Space>
 
 " Toggle paste mode with \p
 set pastetoggle=<leader>p

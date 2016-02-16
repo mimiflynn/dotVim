@@ -66,3 +66,19 @@ hi colorcolumn ctermbg=234
 
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+
+" Nerdtree stuff
+map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+
+" open nerdtree automatically when no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if nerdtree is all that is left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" nerdtree arrow config
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+

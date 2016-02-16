@@ -67,7 +67,7 @@ if version >= 703
 endif
 
 "Enable Spell check
-set spell
+"set spell
 
 "Set autoindent
 set ai
@@ -81,16 +81,19 @@ set columns=100
 set guioptions-=T
 "set background=dark
 set transparency=5
-colorscheme cobalt
+"colorscheme cobalt
+"colorscheme twilight
+colorscheme ir_black
 
 "highlight current line
 set cursorline
 
 "highlight bg color of current line
-hi cursorline guibg=#7F3700
-hi colorcolumn guibg=#020236
+"hi cursorline guibg=#7F3700
+"hi colorcolumn guibg=#020236
+hi cursorline guibg=#444444
 
-let NERDTreeQuitOnOpen = 1
+let NERDTreeQuitOnOpen=1
 
 map <D-1> :tabn 1<CR>
 map <D-2> :tabn 2<CR>

@@ -5,12 +5,13 @@ map <leader>g :tabedit ~/.gvimrc.local<CR>
 autocmd! bufwritepost .gvimrc.local source ~/.gvimrc.local
 
 " Appearance
-set lines=50
-set columns=100
+set lines=70
+set columns=140
 set guifont=Monaco:h12
 set guioptions-=T
 set transparency=5
-colorscheme cobaltish
+" colorscheme cobaltish
+colorscheme ir_black
 
 " highlight current line
 set cursorline

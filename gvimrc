@@ -47,9 +47,10 @@ set visualbell
 " And reset the terminal code for the visual bell.  If visualbell is set, and
 " this line is also included, vim will neither flash nor beep.  If visualbell
 " is unset, this does nothing.
-" set t_vb=
+set t_vb=
 
 " Set the command window height to 2 lines, to avoid many cases of having to
+" "press <Enter> to continue"
 set cmdheight=2
 
 " Quickly time out on keycodes, but never time out on mappings
@@ -74,14 +75,13 @@ set ai
 set ignorecase
 
 "Appearance
-set lines=50
-set columns=140
+set lines=60
+set columns=100
 "set guifont=Monaco:h14
 set guioptions-=T
 "set background=dark
-set transparency=15
-" colorscheme cobalt
-colorscheme ir_black
+set transparency=5
+colorscheme cobalt
 
 "highlight current line
 set cursorline
@@ -89,6 +89,8 @@ set cursorline
 "highlight bg color of current line
 hi cursorline guibg=#7F3700
 hi colorcolumn guibg=#020236
+
+let NERDTreeQuitOnOpen = 1
 
 map <D-1> :tabn 1<CR>
 map <D-2> :tabn 2<CR>
@@ -115,14 +117,3 @@ map <leader>g :tabedit ~/.gvimrc<CR>
 
 " When gvimrc is edited, reload it
 autocmd! bufwritepost .gvimrc source ~/.gvimrc
-
-" Nerdtree settings
-" close nerdtree with last tab
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" open with leader+n
-map <C-n> :NERDTreeToggle<CR>
-
-" open when no files are selected
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

@@ -75,7 +75,7 @@ set ignorecase
 
 "Appearance
 set lines=50
-set columns=140
+set columns=262
 "set guifont=Monaco:h14
 set guioptions-=T
 "set background=dark

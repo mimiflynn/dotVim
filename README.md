@@ -12,9 +12,12 @@ Clone into `.dotvim` into your home directory and symlink the `.vimrc.local` and
 
 ```bash
 cd ~/
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
 git clone git@github.com:mimiflynn/dotVim.git .dotVim
 ln -s .dotVim/vimrc.local .vimrc.local
-ln -s .dotVim/gvimrc.local .gvimrc.local
+ln -s .dotVim/vimrc.bundle.local .vimrc.bundle.local
+ln -s .dotVim/gvimrc .gvimrc
 ```
 
-After symlinking, open up vim and run `:BundleInstall` to install Command-T and then go back to the terminal and `cd` your way into `.vim/Bundle/Command-t/` and run `rake make` to finish installation. This installation requires Ruby, gcc and such. Please refer to the [Command-T](https://github.com/wincent/Command-T) documentation if you run into any trouble.

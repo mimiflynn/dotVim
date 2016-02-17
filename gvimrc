@@ -88,9 +88,9 @@ colorscheme ir_black
 set cursorline
 
 "highlight bg color of current line
-"hi cursorline guibg=#7F3700
-"hi colorcolumn guibg=#020236
-hi cursorline guibg=#444444
+hi cursorline guibg=#7F3700
+hi colorcolumn guibg=#020236
+" hi cursorline guibg=#444444
 
 let NERDTreeQuitOnOpen=1
 

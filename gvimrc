@@ -79,14 +79,9 @@ set columns=262
 "set guifont=Monaco:h14
 set guioptions-=T
 "set background=dark
-<<<<<<< HEAD
-set transparency=5
-"colorscheme cobalt
-"colorscheme twilight
-=======
 set transparency=15
 " colorscheme cobalt
->>>>>>> 2b200b04cc4dbb3009d185749357c05a6a210ff0
+
 colorscheme ir_black
 
 "highlight current line
@@ -97,11 +92,8 @@ set cursorline
 "hi colorcolumn guibg=#020236
 hi cursorline guibg=#444444
 
-<<<<<<< HEAD
 let NERDTreeQuitOnOpen=1
 
-=======
->>>>>>> 2b200b04cc4dbb3009d185749357c05a6a210ff0
 map <D-1> :tabn 1<CR>
 map <D-2> :tabn 2<CR>
 map <D-3> :tabn 3<CR>

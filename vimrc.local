@@ -16,9 +16,7 @@ map <leader>s :%s/\s\+$//e<CR>:w!<CR>
 map <leader>o :tabedit<Space>
 
 "map <leader>t :CommandT<CR>
-map <leader>t :CtrlP<CR>
-
-map <leader>T :CommandT<Space>~/Projects
+map <leader>p :CtrlP<CR>
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
@@ -86,15 +84,20 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " use js as jsx extention
 let g:jsx_ext_required = 0
 
-let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
-let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
-
 " json
 au BufRead,BufNewFile *.json set filetype=json
-let g:syntastic_json_checkers=['jsonlint']
 
 " tabs
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+autocmd FileType javascript,jsx setlocal expandtab shiftwidth=2 softtabstop=2
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+let g:syntastic_json_checkers=['jsonlint']
+

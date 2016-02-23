@@ -131,9 +131,3 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-autocmd FileType javascript,jsx setlocal expandtab shiftwidth=2 softtabstop=2

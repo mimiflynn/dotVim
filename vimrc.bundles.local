@@ -1,2 +1,3 @@
 Bundle 'mxw/vim-jsx'
 Bundle 'jaxbot/syntastic-react'
+Bundle 'vim-airline/vim-airline-themes'

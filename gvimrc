@@ -90,7 +90,6 @@ set cursorline
 "highlight bg color of current line
 hi cursorline guibg=#7F3700
 hi colorcolumn guibg=#020236
-" hi cursorline guibg=#444444
 
 let NERDTreeQuitOnOpen=1
 
@@ -131,3 +130,9 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" tabs
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+autocmd FileType javascript,jsx setlocal expandtab shiftwidth=2 softtabstop=2

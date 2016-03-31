@@ -6,10 +6,10 @@ autocmd! bufwritepost .gvimrc.local source ~/.gvimrc.local
 
 " Appearance
 set lines=50
-set columns=100
-set guifont=Monaco:h12
+set columns=262
+set guifont=Monaco:h13
 set guioptions-=T
-set transparency=5
+set transparency=15
 
 " highlight current line
 set cursorline
@@ -17,3 +17,10 @@ set cursorline
 "highlight bg color of current line
 hi cursorline guibg=#7F3700
 hi colorcolumn guibg=#020236
+
+" tabs
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+autocmd FileType javascript,jsx setlocal expandtab shiftwidth=2 softtabstop=2

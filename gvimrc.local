@@ -7,7 +7,7 @@ autocmd! bufwritepost .gvimrc.local source ~/.gvimrc.local
 " Appearance
 set lines=50
 set columns=262
-set guifont=Monaco:h13
+set guifont=Hack:h13
 set guioptions-=T
 set transparency=15
 

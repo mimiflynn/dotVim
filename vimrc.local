@@ -1,3 +1,5 @@
+set nocompatible
+
 " Keyboard Shortcuts
 
 let mapleader = '\'
@@ -50,6 +52,7 @@ set nolist
 set mouse=a
 
 colorscheme ir_black
+"colorscheme darkdot
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost .vimrc.local source ~/.vimrc.local
@@ -71,11 +74,11 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
 
 " open nerdtree automatically when no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " close vim if nerdtree is all that is left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " nerdtree arrow config
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -100,4 +103,45 @@ set statusline+=%{SyntasticStatuslineFlag()}
 let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
 let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 let g:syntastic_json_checkers=['jsonlint']
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" fixing insert arrow key issue on linux
+nnoremap <silent> <ESC>OA <ESC>ki
+nnoremap <silent> <ESC>OB <ESC>ji
+nnoremap <silent> <ESC>OC <ESC>hi
+nnoremap <silent> <ESC>OD <ESC>li
+inoremap <silent> <ESC>OA <ESC>ki
+inoremap <silent> <ESC>OB <ESC>ji
+inoremap <silent> <ESC>OC <ESC>hi
+inoremap <silent> <ESC>OD <ESC>li
+
 

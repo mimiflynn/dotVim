@@ -75,11 +75,11 @@ set ignorecase
 
 "Appearance
 set lines=50
-set columns=262
-"set guifont=Monaco:h14
+set columns=205
+set gfn=DejaVu\ Sans\ Mono\ Book\ 11
 set guioptions-=T
 "set background=dark
-set transparency=15
+"set transparency=15
 " colorscheme cobalt
 
 colorscheme ir_black
@@ -118,17 +118,6 @@ map <leader>g :tabedit ~/.gvimrc<CR>
 
 " When gvimrc is edited, reload it
 autocmd! bufwritepost .gvimrc source ~/.gvimrc
-
-" Nerdtree settings
-" close nerdtree with last tab
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" open with leader+n
-map <C-n> :NERDTreeToggle<CR>
-
-" open when no files are selected
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " tabs
 set tabstop=2

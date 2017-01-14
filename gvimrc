@@ -124,7 +124,7 @@ autocmd! bufwritepost .gvimrc source ~/.gvimrc
 " close nerdtree with last tab
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" open with leader+n
+" open with ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
 " open when no files are selected

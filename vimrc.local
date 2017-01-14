@@ -33,7 +33,7 @@ map <leader>= :tablast<CR>
 map <leader>b :buffer<Space>
 
 " Toggle paste mode with \p
-set pastetoggle=<leader>p
+" set pastetoggle=<leader>p
 
 " Toggle line numbers with \n
 nmap <leader>n :set invnumber<CR>
@@ -60,7 +60,7 @@ if version >= 703
 endif
 
 "highlight bg color of current line
-hi cursorline ctermbg=black
+hi cursorline ctermbg=234
 hi colorcolumn ctermbg=234
 
 let g:CommandTAcceptSelectionMap = '<C-t>'

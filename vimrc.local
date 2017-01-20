@@ -135,15 +135,6 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " fixing insert arrow key issue on linux
-nnoremap <silent> <ESC>OA <ESC>ki
-nnoremap <silent> <ESC>OB <ESC>ji
-nnoremap <silent> <ESC>OC <ESC>hi
-nnoremap <silent> <ESC>OD <ESC>li
-inoremap <silent> <ESC>OA <ESC>ki
-inoremap <silent> <ESC>OB <ESC>ji
-inoremap <silent> <ESC>OC <ESC>hi
-inoremap <silent> <ESC>OD <ESC>li
-
 set showmode
 set number
 set nocompatible

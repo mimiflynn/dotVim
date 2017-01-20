@@ -79,7 +79,7 @@ set columns=205
 set gfn=Hack\ 10
 set guioptions-=T
 "set background=dark
-"set transparency=15
+set transparency=15
 " colorscheme cobalt
 
 colorscheme ir_black
@@ -123,7 +123,7 @@ autocmd! bufwritepost .gvimrc source ~/.gvimrc
 " close nerdtree with last tab
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" open with ctrl+n
+" open with leader+n
 map <C-n> :NERDTreeToggle<CR>
 
 " open when no files are selected
@@ -136,4 +136,3 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 autocmd FileType javascript,jsx setlocal expandtab shiftwidth=2 softtabstop=2
-

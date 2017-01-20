@@ -76,7 +76,7 @@ set ignorecase
 "Appearance
 set lines=50
 set columns=205
-set gfn=DejaVu\ Sans\ Mono\ Book\ 11
+set gfn=Hack\ 10
 set guioptions-=T
 "set background=dark
 "set transparency=15

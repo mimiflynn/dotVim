@@ -144,4 +144,8 @@ inoremap <silent> <ESC>OB <ESC>ji
 inoremap <silent> <ESC>OC <ESC>hi
 inoremap <silent> <ESC>OD <ESC>li
 
-
+set showmode
+set number
+set nocompatible
+set syntax=automatic
+set backspace=indent,eol,start

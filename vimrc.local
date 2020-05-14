@@ -70,8 +70,8 @@ let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
 " Nerdtree stuff
-map <C-n> :NERDTreeToggle<CR>
-autocmd vimenter * NERDTree
+"map <C-n> :NERDTreeToggle<CR>
+"autocmd vimenter * NERDTree
 
 " open nerdtree automatically when no files were specified
 " autocmd StdinReadPre * let s:std_in=1
@@ -140,3 +140,5 @@ set number
 set nocompatible
 set syntax=automatic
 set backspace=indent,eol,start
+
+set term=cons25
